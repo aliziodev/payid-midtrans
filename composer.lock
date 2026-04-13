@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "545a754362349d729f578cdf450a3cf2",
+    "content-hash": "69b73164318315edda41dda0f3806295",
     "packages": [
         {
             "name": "aliziodev/midtrans-php",
