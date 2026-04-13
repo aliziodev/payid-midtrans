@@ -1,0 +1,14 @@
+{
+    "transaction_time": "2024-01-15 09:00:00",
+    "transaction_status": "expire",
+    "transaction_id": "f9e8d7c6-b5a4-3210-fedc-ba9876543210",
+    "status_message": "midtrans payment notification",
+    "status_code": "407",
+    "signature_key": "f9e8d7c6b5a43210fedcba9876543210a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3",
+    "payment_type": "gopay",
+    "order_id": "ORDER-003",
+    "merchant_id": "G141532850",
+    "gross_amount": "75000.00",
+    "fraud_status": "accept",
+    "currency": "IDR"
+}

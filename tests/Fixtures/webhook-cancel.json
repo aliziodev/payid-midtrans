@@ -1,0 +1,20 @@
+{
+    "transaction_time": "2024-01-15 11:00:00",
+    "transaction_status": "cancel",
+    "transaction_id": "c0d1e2f3-a4b5-6789-cdef-012345678901",
+    "status_message": "midtrans payment notification",
+    "status_code": "200",
+    "signature_key": "c0d1e2f3a4b56789cdef012345678901a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3",
+    "payment_type": "bank_transfer",
+    "order_id": "ORDER-004",
+    "merchant_id": "G141532850",
+    "gross_amount": "100000.00",
+    "fraud_status": "accept",
+    "currency": "IDR",
+    "va_numbers": [
+        {
+            "bank": "bni",
+            "va_number": "9888500017530860"
+        }
+    ]
+}

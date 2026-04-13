@@ -1,0 +1,15 @@
+{
+    "transaction_id": "d1e2f3a4-b5c6-7890-def0-123456789012",
+    "order_id": "ORDER-001",
+    "payment_type": "qris",
+    "transaction_time": "2024-01-15 14:00:00",
+    "transaction_status": "refund",
+    "fraud_status": "accept",
+    "status_code": "200",
+    "status_message": "Midtrans payment refund response",
+    "gross_amount": "150000.00",
+    "refund_amount": "150000.00",
+    "refund_key": "RFD-ORDER-001-001",
+    "currency": "IDR",
+    "merchant_id": "G141532850"
+}

@@ -1,0 +1,16 @@
+{
+    "transaction_id": "cc1d2e3f-4a5b-6789-cdef-012345678901",
+    "order_id": "ORDER-CC-001",
+    "payment_type": "credit_card",
+    "transaction_time": "2024-01-15 12:00:00",
+    "transaction_status": "capture",
+    "fraud_status": "accept",
+    "status_code": "200",
+    "status_message": "Success, transaction is approved",
+    "gross_amount": "500000.00",
+    "currency": "IDR",
+    "merchant_id": "G141532850",
+    "masked_card": "481111-1114",
+    "bank": "bni",
+    "approval_code": "1234567"
+}

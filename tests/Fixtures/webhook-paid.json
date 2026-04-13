@@ -1,0 +1,16 @@
+{
+    "transaction_time": "2024-01-15 10:30:00",
+    "transaction_status": "settlement",
+    "transaction_id": "be4f3ad3-bb98-4b52-a3e6-ab7b5c8d4e5f",
+    "status_message": "midtrans payment notification",
+    "status_code": "200",
+    "signature_key": "d3d2a80cd89a4e0d6afdd13f0c3e6f8b1c2d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4",
+    "settlement_time": "2024-01-15 10:35:00",
+    "payment_type": "qris",
+    "order_id": "ORDER-001",
+    "merchant_id": "G141532850",
+    "gross_amount": "150000.00",
+    "fraud_status": "accept",
+    "currency": "IDR",
+    "acquirer": "gopay"
+}

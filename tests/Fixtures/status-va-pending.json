@@ -1,0 +1,19 @@
+{
+    "transaction_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "order_id": "ORDER-002",
+    "payment_type": "bank_transfer",
+    "transaction_time": "2024-01-15 10:00:00",
+    "transaction_status": "pending",
+    "fraud_status": "accept",
+    "status_code": "201",
+    "status_message": "Success, transaction is found",
+    "gross_amount": "200000.00",
+    "currency": "IDR",
+    "merchant_id": "G141532850",
+    "va_numbers": [
+        {
+            "bank": "bca",
+            "va_number": "12345678901234"
+        }
+    ]
+}

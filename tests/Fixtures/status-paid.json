@@ -1,0 +1,16 @@
+{
+    "transaction_id": "be4f3ad3-bb98-4b52-a3e6-ab7b5c8d4e5f",
+    "masked_card": null,
+    "order_id": "ORDER-001",
+    "payment_type": "qris",
+    "transaction_time": "2024-01-15 10:30:00",
+    "transaction_status": "settlement",
+    "fraud_status": "accept",
+    "status_code": "200",
+    "status_message": "Success, transaction is found",
+    "gross_amount": "150000.00",
+    "currency": "IDR",
+    "settlement_time": "2024-01-15 10:35:00",
+    "acquirer": "gopay",
+    "merchant_id": "G141532850"
+}

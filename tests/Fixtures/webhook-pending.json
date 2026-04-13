@@ -1,0 +1,20 @@
+{
+    "transaction_time": "2024-01-15 10:00:00",
+    "transaction_status": "pending",
+    "transaction_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "status_message": "midtrans payment notification",
+    "status_code": "201",
+    "signature_key": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8",
+    "payment_type": "bank_transfer",
+    "order_id": "ORDER-002",
+    "merchant_id": "G141532850",
+    "gross_amount": "200000.00",
+    "fraud_status": "accept",
+    "currency": "IDR",
+    "va_numbers": [
+        {
+            "bank": "bca",
+            "va_number": "12345678901234"
+        }
+    ]
+}

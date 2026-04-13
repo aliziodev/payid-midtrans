@@ -1,0 +1,9 @@
+{
+    "status_code": "201",
+    "payment_type": "gopay",
+    "account_id": "USER-123",
+    "account_status": "PENDING",
+    "metadata": {
+        "approval_url": "https://api.sandbox.midtrans.com/v2/pay/account/USER-123/link"
+    }
+}

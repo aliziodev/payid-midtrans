@@ -1,0 +1,66 @@
+{
+  "name": "aliziodev/payid-midtrans",
+  "description": "Midtrans driver for PayID — Laravel Payment Orchestrator",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "payment",
+    "midtrans",
+    "payid",
+    "indonesia"
+  ],
+  "authors": [
+    {
+      "name": "Alizio Dev",
+      "email": "hello@aliziodev.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "aliziodev/midtrans-php": "^1.0",
+    "aliziodev/payid": "^0.1",
+    "illuminate/contracts": "^11.0|^12.0|^13.0",
+    "illuminate/http": "^11.0|^12.0|^13.0",
+    "illuminate/support": "^11.0|^12.0|^13.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.0|^10.0|^11.0",
+    "pestphp/pest": "^3.0|^4.0",
+    "pestphp/pest-plugin-laravel": "^3.0|^4.0",
+    "laravel/pint": "^1.0",
+    "larastan/larastan": "^3.0",
+    "phpstan/phpstan": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Aliziodev\\PayIdMidtrans\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Aliziodev\\PayIdMidtrans\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Aliziodev\\PayIdMidtrans\\MidtransServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "lint": "vendor/bin/pint",
+    "lint-check": "vendor/bin/pint --test",
+    "analyse": "vendor/bin/phpstan analyse"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

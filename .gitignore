@@ -1,0 +1,15 @@
+/vendor/
+/.idea/
+/.vscode/
+/.phpunit.result.cache
+/.phpunit.cache/
+/.cache/
+coverage/
+build/
+.env
+.env.*
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+/docs
