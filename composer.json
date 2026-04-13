@@ -56,7 +56,7 @@
     }
   },
   "scripts": {
-    "test": "vendor/bin/pest",
+    "test": "vendor/bin/pest --configuration=phpunit.xml",
     "lint": "vendor/bin/pint",
     "lint-check": "vendor/bin/pint --test",
     "analyse": "vendor/bin/phpstan analyse"
