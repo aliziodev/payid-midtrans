@@ -256,6 +256,102 @@ class MidtransDriver implements DriverInterface, SupportsApprove, SupportsCancel
         return true;
     }
 
+    /**
+     * Driver-specific extension API (outside PayID manager contract).
+     *
+     * @return array<string, mixed>
+     */
+    public function getSnapBiTransactionStatus(string $orderOrTransactionId): array
+    {
+        return $this->sdkCall(fn () => $this->client->transactionStatusB2b($orderOrTransactionId));
+    }
+
+    /**
+     * Driver-specific extension API (outside PayID manager contract).
+     *
+     * @param  array<string, mixed>  $payload
+     * @return array<string, mixed>
+     */
+    public function createPaymentLink(array $payload): array
+    {
+        $orderId = is_array($payload['transaction_details'] ?? null)
+            ? (string) (($payload['transaction_details']['order_id'] ?? '') ?: 'payment-link')
+            : 'payment-link';
+
+        return $this->sdkCall(fn () => $this->withIdempotency('payment-link-create', $orderId)
+            ->createPaymentLink($payload)
+        );
+    }
+
+    /**
+     * Driver-specific extension API (outside PayID manager contract).
+     *
+     * @return array<string, mixed>
+     */
+    public function getPaymentLink(string $orderId): array
+    {
+        return $this->sdkCall(fn () => $this->client->getPaymentLinkDetails($orderId));
+    }
+
+    /**
+     * Driver-specific extension API (outside PayID manager contract).
+     *
+     * @return array<string, mixed>
+     */
+    public function deletePaymentLink(string $orderId): array
+    {
+        return $this->sdkCall(fn () => $this->withIdempotency('payment-link-delete', $orderId)
+            ->deletePaymentLink($orderId)
+        );
+    }
+
+    /**
+     * Driver-specific extension API (outside PayID manager contract).
+     *
+     * @return array<string, mixed>
+     */
+    public function getBalanceMutation(string $currency, string $startTime, string $endTime): array
+    {
+        return $this->sdkCall(fn () => $this->client->getBalanceMutation($currency, $startTime, $endTime));
+    }
+
+    /**
+     * Driver-specific extension API (outside PayID manager contract).
+     *
+     * @param  array<string, mixed>  $payload
+     * @return array<string, mixed>
+     */
+    public function createInvoice(array $payload): array
+    {
+        $externalId = (string) (($payload['external_id'] ?? '') ?: 'invoice');
+
+        return $this->sdkCall(fn () => $this->withIdempotency('invoice-create', $externalId)
+            ->createInvoice($payload)
+        );
+    }
+
+    /**
+     * Driver-specific extension API (outside PayID manager contract).
+     *
+     * @return array<string, mixed>
+     */
+    public function getInvoice(string $invoiceId): array
+    {
+        return $this->sdkCall(fn () => $this->client->getInvoice($invoiceId));
+    }
+
+    /**
+     * Driver-specific extension API (outside PayID manager contract).
+     *
+     * @return array<string, mixed>
+     */
+    public function voidInvoice(string $invoiceId): array
+    {
+        return $this->sdkCall(fn () => $this->withIdempotency('invoice-void', $invoiceId)
+            ->voidInvoice($invoiceId)
+        );
+    }
+
     protected function withIdempotency(string $scope, string $reference): MidtransClient
     {
         return $this->client->withIdempotencyKey(IdempotencyKey::generate($scope.'-'.trim($reference)));

@@ -16,14 +16,14 @@ describe('ChargeRequestMapper', function () {
             'merchant_order_id' => 'ORDER-001',
             'amount' => 150000,
             'channel' => PaymentChannel::Qris,
-            'customer' => ['name' => 'Budi Santoso', 'email' => 'budi@example.com'],
+            'customer' => ['name' => 'Alizio', 'email' => 'budi@example.com'],
         ]);
 
         $payload = $this->mapper->toSnapPayload($request);
 
         expect($payload['transaction_details']['order_id'])->toBe('ORDER-001');
         expect($payload['transaction_details']['gross_amount'])->toBe(150000);
-        expect($payload['customer_details']['first_name'])->toBe('Budi Santoso');
+        expect($payload['customer_details']['first_name'])->toBe('Alizio');
         expect($payload['customer_details']['email'])->toBe('budi@example.com');
         expect($payload['enabled_payments'])->toBe(['qris']);
     });
